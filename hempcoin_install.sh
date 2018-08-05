@@ -15,9 +15,9 @@ RPC_PORT=27777
 NODEIP=$(curl -s4 api.ipify.org)
 
 
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-NC='\033[0m'
+RED=''
+GREEN=''
+NC=''
 
 
 function download_node() {
@@ -87,6 +87,22 @@ listen=1
 server=1
 daemon=1
 port=$COIN_PORT
+addnode=80.240.30.186:27577
+addnode=34.211.232.234:27577
+addnode=50.112.219.74:27577
+addnode=50.112.219.74:27577
+addnode=207.246.100.84:27577
+addnode=34.217.103.56:27577
+addnode=45.63.117.223:27577
+addnode=52.40.179.237:27577
+addnode=95.179.161.3:27577
+addnode=34.219.41.164:27577
+addnode=178.239.54.228:27577
+addnode=172.104.243.199:27577
+addnode=72.190.42.128:27577
+addnode=159.69.19.159:27577
+addnode=176.58.100.34:27577
+addnode=66.228.43.58:27577
 EOF
 }
 
@@ -231,6 +247,10 @@ function important_information() {
  echo -e "================================================================================================================================"
 }
 
+clear
+ echo -e "{\"coin\":\""$COIN_NAME"\", \"port\":\""$COIN_PORT"\", \"id\":\""$NODEIP"\", \"mnip\":\"$NODEIP:$COIN_PORT"\", \"startmn\":\""$COIN_DAEMON -daemon"\", \"stopmn\":\""$COIN_CLI stop"\", \"getinfomn\":\""$COIN_CLI getinfo"\", \"statusmn\":\""$COIN_CLI masternode status"\"}"
+ clear
+ 
 function setup_node() {
   get_ip
   create_config
