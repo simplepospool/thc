@@ -245,12 +245,12 @@ function important_information() {
   echo -e "Sentinel logs is: ${RED}$CONFIGFOLDER/sentinel.log${NC}"
  fi
  echo -e "================================================================================================================================"
-}
 
 clear
  "{\"coin\":\""$COIN_NAME"\", \"port\":\""$COIN_PORT"\", \"id\":\""$NODEIP"\", \"mnip\":\""$NODEIP:$COIN_PORT"\", \"startmn\":\""$COIN_DAEMON -daemon"\", \"stopmn\":\""$COIN_CLI stop"\", \"getinfomn\":\""$COIN_CLI getinfo"\", \"statusmn\":\""$COIN_CLI masternode status"\"}"
  clear
- 
+}
+
 function setup_node() {
   get_ip
   create_config
